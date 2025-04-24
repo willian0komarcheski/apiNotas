@@ -1,13 +1,13 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../config/databaseConfig');
 
 const Nota = sequelize.define('Nota', {
   alunoId: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  disciplina: {
-    type: DataTypes.STRING,
+  disciplinaId: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
   valor: {

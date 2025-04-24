@@ -1,8 +1,8 @@
-const { alunosApi } = require('../config/apiAlunos');
+const { apiAlunos } = require('../config/apiAlunos');
 
 async function buscarAlunoPorId(id) {
   try {
-    const response = await alunosApi.get(`/${id}`);
+    const response = await apiAlunos.get(`/${id}`);
     return response.data;
   } catch (err) {
     if (err.response && err.response.status === 404) {
