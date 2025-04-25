@@ -47,7 +47,8 @@ async function criarNota(req, res) {
     const nota = await Nota.create({ alunoId, disciplinaId, valor });
     return res.status(201).json({ ...nota.toJSON(), alunoNome: aluno.nome });
   } catch (error) {
-    return res.status(500).json({ erro: 'Erro ao criar nota' });
+    console.log(error);
+    return res.status(500).json(error);
   }
 }
 

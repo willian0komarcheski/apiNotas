@@ -5,6 +5,7 @@ async function buscarDisciplinaPorId(id) {
     const response = await apiDisciplinas.get(`/${id}`);
     return response.data;
   } catch (err) {
+    console.log(err);
     if (err.response && err.response.status === 404) {
       return null;
     }

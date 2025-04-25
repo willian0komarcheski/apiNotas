@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const apiDisciplinas = axios.create({
-  baseURL: process.env.DISCIPLINA_API_BASE_URL,
+  baseURL: process.env.DISCIPLINAS_API_URL,
   timeout: 5000,
 });
 
